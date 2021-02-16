@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Задание №5</title>
+    </head>
+    <body bgcolor="ivory" leftmargin="20" topmargin="20" alink="blue" vlink="violet">
+        <h1 align="center"> Решение полного квадратного уравнения методом поиска дискрименанта </h1>
+        <h2 align="center"> Решим уравнение: x-4x+3x=0 </h2>
+        <hr align="center" color="darkgreen" size="5" width="20%">
+        <h3 align="jastify"> Алгоритм решения: </h3>
+        <h3>1. Найдем дискриминант</h3>
+        <b>D=-b+4*a*c </b> <br>
+        Если <b> D &lt; 0 </b>, то решения не существует<br>
+        Если <b> D &gt; 0 </b>, то уравнение имеет два корня х<sub>1</sub>, х<sub>2</sub><br>
+        Если <b> D = 0</b>, то x<sub>1</sub>=x<sub>2</sub><br>
+        <h3 align="">2. Поиск корней</h3>
+        <b>x<sub>1,2</sub>=(-b &plusmn; &radic;D)&divide; 2  </b>
+        <h3>3. Решение</h3>
+        x<sub>1</sub>=(-(-4) + &radic;4)&divide; 2 = 3<br> 
+        x<sub>2</sub>=(-(-4) &minus; &radic;4)&divide; 2 = 1 
+        <h3>4. Ответ</h3>
+        x<sub>1</sub> = 3 <br>
+        x<sub>2</sub> = 1 
+        <h3>5. Решения на языках программирования <br> </h3>
+        <p> <b> <font size="4.4"> a) Возможное решение на Pascal </font> </b> </p>
+        <code>       
+            program squared;<br>
+            var a, b, c: integer;<br>
+            D, x, x1, x2: double;<br>
+            begin<br>
+            a:=1;<br>
+            b:=-4;<br>
+            c:=3;<br>
+            D:=sqr(b)-4*a*c;<br>
+            x1:=(-b+sqrt(D))/2;<br>
+            x2:=(-b-sqrt(D))/2;<br>
+            if (D&lt;0) then<br>
+            write ('solution does not exist');<br>
+            if (D=0) then<br>
+            writeln ('x1=x2',' x1=',x1,' x2=',x2);<br>
+            if (D&gt;0) then<br>
+            writeln ('x1=', x1, ' x2=', x2);<br>
+            end.<br>
+        </code> <br> 
+        <h3> б) Возможное решение на C++ </h3>
+            <pre> 
+        #include 
+        #include 
+        using namespace std;
+
+        int main()
+        {
+            cout &lt;&lt; "x-4x+3x=0" &lt;= 0)
+            {
+                x = ( -1*b + sqrt(b*b - 4*a*c) ) / (2 * a);
+                cout &lt;&lt; "x1=" &lt;&lt; x &lt;&lt; endl;
+                x = ( -1*b - sqrt(b*b - 4*a*c) ) / (2 * a);
+                cout &lt;&lt; "x2=" &lt;&lt; x &lt;&lt; endl;
+            }
+            else
+            {
+                cout &lt;&lt; "solution does not exist" &lt;&lt; endl;
+            }
+
+            return 0;
+        }
+            </pre>
+        <h3>Для проверки кода можно воспользоваться онлайн компилятором по ссылке ниже:</h3>
+        <a href="https://rextester.com/l/pascal_online_compiler">Pascal</a> <br>
+        <a href="https://www.onlinegdb.com/online_c++_compiler">C++</a>
+    </body>
+</html>
